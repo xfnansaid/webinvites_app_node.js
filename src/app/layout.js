@@ -177,6 +177,21 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        {/* Google Analytics 4 (GA4) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BPNYZQ4PHZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BPNYZQ4PHZ', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
       </head>
       <body className="antialiased">
         <AppProviders>{children}</AppProviders>
