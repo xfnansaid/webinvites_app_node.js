@@ -13,7 +13,7 @@ import Script from 'next/script';
 export function InFeedAdBanner({ adSlotId, adClient }) {
   const adRef = useRef(null);
   const client = adClient || process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
-  const slot = adSlotId || process.env.NEXT_PUBLIC_ADSENSE_INFEED_SLOT || '1234567890';
+  const slot = adSlotId || process.env.NEXT_PUBLIC_ADSENSE_INFEED_SLOT || '9246211840';
 
   useEffect(() => {
     if (typeof window !== 'undefined' && client) {
